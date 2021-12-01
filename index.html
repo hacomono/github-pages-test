@@ -13,17 +13,23 @@
             }
         }
     </script>
+    <script>
+        function dns_dig(){
+            hostname=document.getElementById("hostname");
+            document.getElementById("test").textContent=hostname;
+        }
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand">GITHUB PAGES TEST</a>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" id="hostname" type="search" placeholder="hostname" aria-label="hostname">
+                <button class="btn btn-outline-success" type="submit" onclick="dns_dig">Search</button>
             </form>
         </div>
     </nav>
-    test1
-    <div id="test"></div>
+    
+    <div id="test"><test1/div>
 </body>
