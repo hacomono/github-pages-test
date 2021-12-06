@@ -6,7 +6,7 @@
     <script>
         function dns_dig(){
             console.log('test')
-            var hostname = document.getElementById('hostname');
+            var hostname = document.getElementById('inputname');
             if(hostname.value){
                 var data = new FormData();
                 data.append('hostName', hostname.value);
@@ -16,7 +16,8 @@
                         if(this.response){
                             console.log(data)
                             console.log(this.response);
-                            document.getElementById('test').textContent=this.response;
+                            document.getElementById('hostname').textContent=this.response['HostName'];
+                            document.getElementById('CNAME').textContent=this.response['CNAME'];
                         }
                     }
                 }
@@ -33,7 +34,9 @@
             <a class="navbar-brand">GITHUB PAGES TEST</a>
         </div>
     </nav>
-    <input id="hostname" placeholder="hostname" type="text">
+    <input id="inputname" placeholder="hostname" type="text">
     <button onclick="dns_dig()">search</button>
     <div id="test">test1</div>
+    <div id="hostname"></div>
+    <div id="cname"></div>
 </body>
