@@ -14,8 +14,8 @@
                         if(this.response){
                             console.log(data)
                             console.log(this.response);
-                            document.getElementById('hostname').textContent=this.response['HostName'];
-                            document.getElementById('cname').textContent=this.response['CNAME'];
+                            document.getElementById('hostname').textContent="HostName : "+this.response['HostName'];
+                            document.getElementById('cname').textContent="CNAME : "+this.response['CNAME'];
                         }
                     }
                 }
