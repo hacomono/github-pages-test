@@ -14,12 +14,12 @@
                 req.onreadystatechange = function(){
                     if(this.readyState == 4 && this.status == 200){
                         if(this.response){
+                            console.log(hostname.value)
                             console.log(this.response);
                             document.getElementById('test').textContent=this.response;
                         }
                     }
                 }
-                //req.addEventListener('load', onLoadFunc, false)
                 req.open('GET', 'https://cbme2j355f.execute-api.ap-northeast-1.amazonaws.com/dev/dev', true);
                 req.responseType = 'json';
                 req.send(data);
