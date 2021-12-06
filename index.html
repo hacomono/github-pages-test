@@ -19,6 +19,7 @@
                         }
                     }
                 }
+                req.addEventListener('load', onloadFunc, false)
                 req.open('GET', 'https://cbme2j355f.execute-api.ap-northeast-1.amazonaws.com/dev/dev', true);
                 req.responseType = 'json';
                 req.send(data);
